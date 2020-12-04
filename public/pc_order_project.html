@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://kit.fontawesome.com/6cf8dee3cc.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="./js/javascript.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="wrap">
+        <div class="boxwrap">
+        <div class="box1 box"> 
+            <div class="top">
+                <div class="categoryTitle">
+                    <span>상품분류</span>
+                </div>
+
+                <div class="searchwrap">
+                    <span>상품검색</span>
+                    <div class="search">
+                        <input type="text" id="searchInput" placeholder="상품명을 입력해주세요">
+                        <span id="searchicon"><a href="#">검색아이콘</a></span>
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <ul id="category">
+
+                </ul>
+                <table class="item">
+                    <thead>
+                        <tr>
+                            <th class="coName">상품이름</th>
+                            <th class="coPrice">가격</th>
+                        </tr>
+                    </thead>
+                    <tbody id = "itemtbody"></tbody>
+                </table>
+
+                <div class="itemcontent">
+                    <div id="itemimage">
+                        상품을 클릭해주세요
+                    </div>
+
+                    <p id="itemContentName"></p>
+                    <p id="itemContentDetail"></p>
+                    <p id="itemContentPrice"><span id="won">원</span></p>
+
+                    <div class="shoppingicon">
+                        <button id="shoppingbutton"><i class="fas fa-shopping-cart"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- box1 : 상품분류, 상품검색, 상품정보 -->
+        <div class="box2 box">
+            <div class="orderTitle">
+                주문목록
+            </div>
+
+            <div class="ordercontent">
+                <div class="orderTable">
+                <table class="orderlist">
+                    <thead>
+                        <tr>
+                            <th class="coName">상품이름</th>
+                            <th class="coPrice">가격</th>
+                            <th class="coSelect">수량</th>
+                            <th class="coDelete">삭제</th>
+                        </tr>
+                    </thead>
+                    <tbody id="orderlistTbody"></tbody>
+                </table>
+                </div>
+                <div class="ordercalc">
+                    <div>
+                    <span class="totalPriceTitle">주문금액</span>
+                    <span id="totalPrice"></span><span class="won">원</span>
+                    </div>
+                    <div>
+                        <span class="paymentTitle">지불방법</span>
+                        <input type="radio" name="payment" value="카드" checked="checked" >카드
+                        <input type="radio" name="payment" value="현금" >현금
+                    </div>
+                    <div id="paymentdiv">
+                    <span class="paymentamountTitle">지불금액</span>
+                    <span class="paymentamount"> <input type="text" id="paymoney"></span><span class="won">원</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="buttons">
+                <button id="orderbutton">주문하기</button>
+                <button id="closebutton">닫기</button>
+            </div>
+        </div>
+        <!-- box2 : 주문목록 -->
+    </div>
+    <!-- boxwrap -->
+    </div>
+</body>
+</html>
