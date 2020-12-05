@@ -1,3 +1,4 @@
+var cors = require('cors');
 var express = require('express');
 var app = express();
 
@@ -6,7 +7,8 @@ var db = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: 'aa950307',
-    database: 'library'
+    database: 'library',
+    port : '3307'
 
 });
 
@@ -14,6 +16,7 @@ db.connect();
 // mysql 관련..
 
 app.use(express.static('public'));
+app.use(cors());
 
 // 초기화면
 app.get('/', function (req, res) {
@@ -21,8 +24,8 @@ app.get('/', function (req, res) {
 });
 
 // 전체 카테고리, 각 카테고리명 보여주기
-app.get('/allCategory', function (req, res) {
-    db.query('SELECT categoryName FROM CATEGORY', function (error, result) {
+app.get('/library/getCategory', function (req, res) {
+    db.query('SELECT * FROM category', function (error, result) {
         if (error) {
             console.log(error);
         }
@@ -31,23 +34,14 @@ app.get('/allCategory', function (req, res) {
 });
 
 // 카테고리 넘버별 항목의 이름, 가격 보여주기
-app.get('/category/:categoryNum', function (req, res) {
-    console.log(`${req.params.categoryNum}`);
-    if (`${req.params.categoryNum}` === '0') {
-        db.query('SELECT num, name, price FROM PRODUCT', function (error, result) {
-            if (error) {
-                console.log(error);
-            }
-            res.send(result);
-        });
-    } else {
-        db.query(`SELECT num, name, price FROM PRODUCT WHERE CATEGORYNUM = ${req.params.categoryNum}`, function (error, result) {
-            if (error) {
-                console.log(error);
-            }
-            res.send(result);
-        });
-    }
+app.get('/library/getBookList/:cid', function (req, res) {
+    console.log(`${req.params.cid}`);
+    db.query(`SELECT * FROM book WHERE cid = ${req.params.cid}`, function (error, result) {
+        if (error) {
+            console.log(error);
+        }
+        res.send(result);
+    });
 });
 
 // 각 아이템의 이름, 가격
