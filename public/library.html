@@ -13,95 +13,133 @@
 </head>
 <body>
     <div id="wrap">
-        <div class="boxwrap">
-        <div class="box1 box"> 
-            <div class="top">
-                <div class="categoryTitle">
-                    <span>상품분류</span>
+        <header>
+            <h1>비전독서리스트 Library</h1>
+        </header>
+        <div class="sectionContainer">
+            <section class="leftSection">
+                <section class="categoryBarSection">
+                    <ul id="categoryBar">
+                    </ul>
+                </section>
+                <section class="bookListSection">
+                    <table class="bookListTable">
+                        <thead>
+                            <tr>
+                                <th>순번</th>
+                                <th>제목</th>
+                                <th>저자</th>
+                                <th>출판사</th>
+                                <th>즐겨찾기</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>인문학도 개발자 되다</td>
+                                <td>마르코</td>
+                                <td>행복출판사</td>
+                                <td><i class="fas fa-star active"></i></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>인문학도 개발자 되다</td>
+                                <td>마르코</td>
+                                <td>행복출판사</td>
+                                <td><i class="fas fa-star active"></i></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>인문학도 개발자 되다</td>
+                                <td>마르코</td>
+                                <td>행복출판사</td>
+                                <td><i class="fas fa-star active"></i></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>인문학도 개발자 되다</td>
+                                <td>마르코</td>
+                                <td>행복출판사</td>
+                                <td><i class="fas fa-star active"></i></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>인문학도 개발자 되다</td>
+                                <td>마르코</td>
+                                <td>행복출판사</td>
+                                <td><i class="fas fa-star active"></i></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>인문학도 개발자 되다</td>
+                                <td>마르코</td>
+                                <td>행복출판사</td>
+                                <td><i class="fas fa-star active"></i></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>인문학도 개발자 되다</td>
+                                <td>마르코</td>
+                                <td>행복출판사</td>
+                                <td><i class="fas fa-star active"></i></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>인문학도 개발자 되다</td>
+                                <td>마르코</td>
+                                <td>행복출판사</td>
+                                <td><i class="fas fa-star active"></i></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>인문학도 개발자 되다</td>
+                                <td>마르코</td>
+                                <td>행복출판사</td>
+                                <td><i class="fas fa-star active"></i></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>인문학도 개발자 되다</td>
+                                <td>마르코</td>
+                                <td>행복출판사</td>
+                                <td><i class="fas fa-star active"></i></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>인문학도 개발자 되다</td>
+                                <td>마르코</td>
+                                <td>행복출판사</td>
+                                <td><i class="fas fa-star active"></i></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </section>
+            <section class="rightSection">
+                <h3>비전독서 상세정보</h3>
+                <div class="bookImageContainer" id="bookImage">
+                    <img class="bookImage" src="img/book/img001.jpg" alt="001 책 이미지"/>
                 </div>
-
-                <div class="searchwrap">
-                    <span>상품검색</span>
-                    <div class="search">
-                        <input type="text" id="searchInput" placeholder="상품명을 입력해주세요">
-                        <span id="searchicon"><a href="#">검색아이콘</a></span>
-                    </div>
-                </div>
-            </div>
-            <div class="content">
-                <ul id="category">
-
-                </ul>
-                <table class="item">
-                    <thead>
-                        <tr>
-                            <th class="coName">상품이름</th>
-                            <th class="coPrice">가격</th>
-                        </tr>
-                    </thead>
-                    <tbody id = "itemtbody"></tbody>
+                <table class="bookDetailTable">
+                    <tr>
+                        <td class="tdTitle">제목</td>
+                        <td class="tdContent" id="bookTitle">인문학도 개발자 되다</td>
+                    </tr>
+                    <tr>
+                        <td class="tdTitle">저자</td>
+                        <td class="tdContent" id="author">마르코</td>
+                    </tr>
+                    <tr>
+                        <td class="tdTitle">출판사</td>
+                        <td class="tdContent" id="publisher">행복출판사</td>
+                    </tr>
+                    <tr>
+                        <td class="tdTitle">메모</td>
+                        <td class="tdContent" id="memo">개발자로 입문하기 좋은 책!</td>
+                    </tr>
                 </table>
-
-                <div class="itemcontent">
-                    <div id="itemimage">
-                        상품을 클릭해주세요
-                    </div>
-
-                    <p id="itemContentName"></p>
-                    <p id="itemContentDetail"></p>
-                    <p id="itemContentPrice"><span id="won">원</span></p>
-
-                    <div class="shoppingicon">
-                        <button id="shoppingbutton"><i class="fas fa-shopping-cart"></i></button>
-                    </div>
-                </div>
-            </div>
+            </section>
         </div>
-        <!-- box1 : 상품분류, 상품검색, 상품정보 -->
-        <div class="box2 box">
-            <div class="orderTitle">
-                주문목록
-            </div>
-
-            <div class="ordercontent">
-                <div class="orderTable">
-                <table class="orderlist">
-                    <thead>
-                        <tr>
-                            <th class="coName">상품이름</th>
-                            <th class="coPrice">가격</th>
-                            <th class="coSelect">수량</th>
-                            <th class="coDelete">삭제</th>
-                        </tr>
-                    </thead>
-                    <tbody id="orderlistTbody"></tbody>
-                </table>
-                </div>
-                <div class="ordercalc">
-                    <div>
-                    <span class="totalPriceTitle">주문금액</span>
-                    <span id="totalPrice"></span><span class="won">원</span>
-                    </div>
-                    <div>
-                        <span class="paymentTitle">지불방법</span>
-                        <input type="radio" name="payment" value="카드" checked="checked" >카드
-                        <input type="radio" name="payment" value="현금" >현금
-                    </div>
-                    <div id="paymentdiv">
-                    <span class="paymentamountTitle">지불금액</span>
-                    <span class="paymentamount"> <input type="text" id="paymoney"></span><span class="won">원</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="buttons">
-                <button id="orderbutton">주문하기</button>
-                <button id="closebutton">닫기</button>
-            </div>
-        </div>
-        <!-- box2 : 주문목록 -->
-    </div>
-    <!-- boxwrap -->
     </div>
 </body>
 </html>
