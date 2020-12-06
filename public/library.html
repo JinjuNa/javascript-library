@@ -5,16 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel=" shortcut icon" href="favicon.png">
+    <link rel="icon" href="favicon.png">
     <script src="https://kit.fontawesome.com/6cf8dee3cc.js"></script>
     <script src="js/data.js"></script>
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="./js/javascript.js"></script>
-    <title>Document</title>
+    <title>딘두 비전독서리스트</title>
 </head>
 <body>
     <div id="wrap">
         <header>
-            <h1>비전독서리스트 Library</h1>
+            <h1>딘두 비전독서리스트</h1>
         </header>
         <div class="sectionContainer">
             <section class="leftSection">
@@ -26,90 +28,16 @@
                     <table class="bookListTable">
                         <thead>
                             <tr>
-                                <th>순번</th>
+                                <th width="50">순번</th>
                                 <th>제목</th>
-                                <th>저자</th>
-                                <th>출판사</th>
-                                <th>즐겨찾기</th>
+                                <th width="160">저자</th>
+                                <th width="130">출판사</th>
+                                <th width="70">중요도</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody id="bookListTbody">
                             <tr>
-                                <td>1</td>
-                                <td>인문학도 개발자 되다</td>
-                                <td>마르코</td>
-                                <td>행복출판사</td>
-                                <td><i class="fas fa-star active"></i></td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>인문학도 개발자 되다</td>
-                                <td>마르코</td>
-                                <td>행복출판사</td>
-                                <td><i class="fas fa-star active"></i></td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>인문학도 개발자 되다</td>
-                                <td>마르코</td>
-                                <td>행복출판사</td>
-                                <td><i class="fas fa-star active"></i></td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>인문학도 개발자 되다</td>
-                                <td>마르코</td>
-                                <td>행복출판사</td>
-                                <td><i class="fas fa-star active"></i></td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>인문학도 개발자 되다</td>
-                                <td>마르코</td>
-                                <td>행복출판사</td>
-                                <td><i class="fas fa-star active"></i></td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>인문학도 개발자 되다</td>
-                                <td>마르코</td>
-                                <td>행복출판사</td>
-                                <td><i class="fas fa-star active"></i></td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>인문학도 개발자 되다</td>
-                                <td>마르코</td>
-                                <td>행복출판사</td>
-                                <td><i class="fas fa-star active"></i></td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>인문학도 개발자 되다</td>
-                                <td>마르코</td>
-                                <td>행복출판사</td>
-                                <td><i class="fas fa-star active"></i></td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>인문학도 개발자 되다</td>
-                                <td>마르코</td>
-                                <td>행복출판사</td>
-                                <td><i class="fas fa-star active"></i></td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>인문학도 개발자 되다</td>
-                                <td>마르코</td>
-                                <td>행복출판사</td>
-                                <td><i class="fas fa-star active"></i></td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>인문학도 개발자 되다</td>
-                                <td>마르코</td>
-                                <td>행복출판사</td>
-                                <td><i class="fas fa-star active"></i></td>
+                                <td colspan="10">카테고리를 선택해 주세요.</td>
                             </tr>
                         </tbody>
                     </table>
@@ -117,13 +45,18 @@
             </section>
             <section class="rightSection">
                 <h3>비전독서 상세정보</h3>
-                <div class="bookImageContainer" id="bookImage">
-                    <img class="bookImage" src="img/book/img001.jpg" alt="001 책 이미지"/>
+                <div id="bookDetail" class="disable">
+                <div class="bookImageContainer">
+                    <img class="bookImage" id="bookImage" src="img/book/img001.jpg" alt="001 책 이미지"/>
                 </div>
                 <table class="bookDetailTable">
                     <tr>
                         <td class="tdTitle">제목</td>
                         <td class="tdContent" id="bookTitle">인문학도 개발자 되다</td>
+                    </tr>
+                    <tr>
+                        <td class="tdTitle">분류</td>
+                        <td class="tdContent" id="category">개발자 로드맵</td>
                     </tr>
                     <tr>
                         <td class="tdTitle">저자</td>
@@ -138,6 +71,7 @@
                         <td class="tdContent" id="memo">개발자로 입문하기 좋은 책!</td>
                     </tr>
                 </table>
+            </div>
             </section>
         </div>
     </div>

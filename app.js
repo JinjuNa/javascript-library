@@ -33,10 +33,19 @@ app.get('/library/getCategory', function (req, res) {
     });
 });
 
-// 카테고리 넘버별 항목의 이름, 가격 보여주기
+// 카테고리id 별 책 리스트의 정보 보여주기
 app.get('/library/getBookList/:cid', function (req, res) {
-    console.log(`${req.params.cid}`);
     db.query(`SELECT * FROM book WHERE cid = ${req.params.cid}`, function (error, result) {
+        if (error) {
+            console.log(error);
+        }
+        res.send(result);
+    });
+});
+
+// 책id 별 상세정보 보여주기
+app.get('/library/getBookDetail/:id', function (req, res) {
+    db.query(`SELECT a.*, b.name as categoryName FROM book a JOIN category b ON a.cid = b.id WHERE a.id = ${req.params.id}`, function (error, result) {
         if (error) {
             console.log(error);
         }

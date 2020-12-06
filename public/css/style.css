@@ -103,6 +103,12 @@ header h1 {
     cursor: pointer;
 }
 
+.bookListTable tbody td{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
 .bookImageContainer{
     text-align: center;
     padding : 20px 0;
@@ -115,5 +121,18 @@ header h1 {
 
 .tdTitle{
     font-weight: 800;
-    padding: 2px;
+    padding: 5px;
+    text-align: center;
+    width: 50px;
+}
+.selected{
+    background-color: #ddd !important;
+    color: #111 !important;
+    font-weight: 900;
+}
+.disable {
+    display: none;
+}
+i.active {
+    color : palevioletred;
 }
